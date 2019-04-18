@@ -1,3 +1,9 @@
-body {
-    background-color: yellow;
+
+.jumbotron{
+    margin: 0 auto;
+    text-align: center;
+}
+
+#picture {
+    width: 90%;
 }
