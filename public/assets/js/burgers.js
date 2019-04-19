@@ -18,6 +18,24 @@ $(function () {
 
     });
 
+    $(".regret").on("click", function (event) {
+
+        var id = $(this).data("id");
+        var isDevoured = {
+            devoured: false
+        };
+
+        $.ajax("/api/burgers/" + id, {
+            type: "PUT",
+            data: isDevoured
+        }).then(
+            function () {
+                location.reload();
+            }
+        );
+
+    });
+
     $(".create-form").on("submit", function (event) {
 
         event.preventDefault();
