@@ -1,5 +1,17 @@
 
 $(function () {
+
+    // getBurgers();
+
+    // burgers = []
+
+    // function getBurgers() {
+    //     $.get("/api/burgers", function(data) {
+    //       burgers = data;
+    //       initializeRows();
+    //     });
+    //   }
+
     $(".devour").on("click", function (event) {
 
         var id = $(this).data("id");

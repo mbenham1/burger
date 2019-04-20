@@ -2,8 +2,18 @@
 .jumbotron{
     margin: 0 auto;
     text-align: center;
+    margin: 10px;
 }
 
 #picture {
     width: 100%;
+}
+
+h3 {
+    text-align: center;
+    text-decoration: underline;
+}
+
+.row {
+    text-align: center;
 }

@@ -9,7 +9,7 @@
         <input type="text" id="burger" name="burger_name">
       </div>
 
-      <button type="submit" class="add-burger">Add a burger</button>
+      <button type="submit" class="add-burger btn-info">Add a burger</button>
 
     </form>
 
@@ -18,40 +18,48 @@
   <div class="container">
     <div class="row">
       <div class="col-md-3">
-        <ul>
+
+        <h3>Waiting Area</h3>
+
+        {{!-- <ul> --}}
+          <p>
           {{#each burger}}
           {{#unless devoured}}
 
-          {{!-- <h3>ID: {{this.id}}</h3> --}}
-          <h4>{{burger_name}}</h4>
-          {{!-- <h4>Devoured? {{this.devoured}}</h4> --}}
-          <button class="devour btn-primary" data-id="{{this.id}}">Devour</button>
-          <button class="delete btn-danger" data-id="{{this.id}}">Delete</button>
-          <br>
-          <br>
+            <h4>{{burger_name}}</h4>
+            {{!-- <h4>Devoured? {{this.devoured}}</h4> --}}
+            <button class="devour btn-primary" data-id="{{this.id}}">Devour</button>
+            <button class="delete btn-danger" data-id="{{this.id}}">Delete</button>
 
           {{/unless}}
           {{/each}}
-        </ul>
+
+        {{!-- </ul> --}}
+        </p>
       </div>
+
       <div class="col-md-6">
         <img src="/assets/img/burger.png" alt="burger" id="picture">
       </div>
+
       <div class="col-md-3">
 
-        <ul>
+        <h3>Destroyed</h3>
+
+        <p>
+          <strike>
+
           {{#each burger}}
           {{#if devoured}}
 
-          <h4>{{burger_name}}</h4>
-          {{!-- <h4>Devoured? {{this.devoured}}</h4> --}}
-          <button class="regret" data-id="{{this.id}}">Regret?</button>
-          <br>
-          <br>
+            <h4>{{burger_name}}</h4>
+            {{!-- <h4>Devoured? {{this.devoured}}</h4> --}}
+            <button class="regret btn-warning" data-id="{{this.id}}">Regret?</button>
 
           {{/if}}
           {{/each}}
-        </ul>
+          </strike>
+        </p>
 
       </div>
     </div>
