@@ -1,6 +1,7 @@
 
 $(function () {
 
+    var burgerInput = $(".create-form");
     // getBurgers();
 
     // burgers = []
@@ -51,6 +52,10 @@ $(function () {
     $(".create-form").on("submit", function (event) {
 
         event.preventDefault();
+
+        if (!burgerInput.val().trim()) {
+            return;
+          }
 
         var newBurger = {
             name: $("#burger").val().trim(),
