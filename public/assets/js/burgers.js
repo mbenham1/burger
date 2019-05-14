@@ -1,7 +1,7 @@
 
 $(function () {
 
-    var burgerInput = $(".create-form");
+    var burgerInput = $("#burger");
     // getBurgers();
 
     // burgers = []
